@@ -11,18 +11,22 @@ import HelpLayout from "./layouts/HelpLayout";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
 import NotFound from "./pages/NotFound";
-
-// <Link> é o href="" puro
-// <NavLink> é o href="" porem uma classe active por default
+import CarrersLayot from "./layouts/CarrersLayot";
+import Careers, { careersLoader } from "./pages/careers/Careers";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="/about" element={<About />} />
+
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} />
+      </Route>
+
+      <Route path="careers" element={<CarrersLayot />}>
+        <Route index element={<Careers />} loader={careersLoader} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

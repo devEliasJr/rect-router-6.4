@@ -1,5 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
 
+// <Link> é o href="" puro
+// <NavLink> é o href="" porem uma classe active por default
+
 export default function RootLayout() {
   return (
     <div className="root-layout">
@@ -9,6 +12,7 @@ export default function RootLayout() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
           <NavLink to="help">Help</NavLink>
+          <NavLink to="careers">Careers</NavLink>
         </nav>
       </header>
       <main>
