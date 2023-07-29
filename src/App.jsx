@@ -1,8 +1,6 @@
 import {
   createBrowserRouter,
   Route,
-  Link,
-  NavLink,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
@@ -12,6 +10,7 @@ import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
+import NotFound from "./pages/NotFound";
 
 // <Link> é o href="" puro
 // <NavLink> é o href="" porem uma classe active por default
@@ -22,18 +21,17 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="help" element={<HelpLayout />}>
-        <Route path="faq" element={<Faq />}/>
-        <Route path="contact" element={<Contact />}/>
+        <Route path="faq" element={<Faq />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
+
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
 
 function App() {
-  return (
-
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
