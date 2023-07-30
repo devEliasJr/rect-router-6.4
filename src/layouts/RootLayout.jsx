@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 // <Link> é o href="" puro
 // <NavLink> é o href="" porem uma classe active por default
@@ -14,6 +15,7 @@ export default function RootLayout() {
           <NavLink to="help">Help</NavLink>
           <NavLink to="careers">Careers</NavLink>
         </nav>
+        <Breadcrumbs />
       </header>
       <main>
         <Outlet />
