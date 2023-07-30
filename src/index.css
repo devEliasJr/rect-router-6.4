@@ -71,6 +71,7 @@ main {
   border: 2px solid white;
   border-radius: 4px;
   text-decoration: none;
+  margin-left: 10px;
 }
 
 .help-layout nav a:hover {
@@ -149,5 +150,11 @@ form button {
 }
 
 /* careers details */
+.career-details {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
 
 /* breadcrumbs */
