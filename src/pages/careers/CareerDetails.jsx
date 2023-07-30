@@ -18,5 +18,10 @@ export const carrerDetailsLoader = async ({ params }) => {
 
   const res = await fetch(`http://localhost:3000/products/${id}`);
 
+  if (!res.ok) {
+    // throw new Error("Could not fetch project");
+    throw new Response("Not Found", { status: 404 });
+  }
+
   return res.json();
 };
