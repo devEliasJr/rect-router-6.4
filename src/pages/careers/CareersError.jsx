@@ -41,5 +41,10 @@ export function CareersError() {
     }
   }
 
-  return <div>Something went wrong</div>;
+  return (
+    <div>
+      <p>Something went wrong, try again later!</p>
+      <Link to="/">Back to Home page</Link>
+    </div>
+  );
 }
